@@ -1,0 +1,11 @@
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.csprojAssemblyReference.cache
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Properties.Resources.resources
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.csproj.GenerateResource.cache
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.csproj.CoreCompileInputs.cache
+C:\Users\Mina\source\repos\SuperMarket\bin\Debug\SuperMarket.exe.config
+C:\Users\Mina\source\repos\SuperMarket\bin\Debug\SuperMarket.exe
+C:\Users\Mina\source\repos\SuperMarket\bin\Debug\SuperMarket.pdb
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Form1.resources
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.exe
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.pdb
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Adding.resources
