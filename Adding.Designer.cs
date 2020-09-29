@@ -41,7 +41,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +96,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(106, 155);
+            this.textBox4.Location = new System.Drawing.Point(106, 126);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(127, 20);
             this.textBox4.TabIndex = 6;
@@ -116,16 +115,17 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 196);
+            this.button1.Location = new System.Drawing.Point(16, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 29);
             this.button1.TabIndex = 8;
             this.button1.Text = "اضافة منتج";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(106, 124);
+            this.textBox5.Location = new System.Drawing.Point(106, 155);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(127, 20);
             this.textBox5.TabIndex = 10;
@@ -142,25 +142,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 205);
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy hh:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(165, 198);
             this.dateTimePicker1.MinDate = new System.DateTime(2020, 9, 28, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(201, 20);
             this.dateTimePicker1.TabIndex = 11;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(295, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 29);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "رجوع";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // Adding
             // 
@@ -168,7 +157,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(378, 237);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
@@ -181,6 +169,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Adding";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -206,6 +195,5 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button3;
     }
 }
