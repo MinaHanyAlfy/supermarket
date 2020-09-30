@@ -16,4 +16,37 @@ C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.exe
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.pdb
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Store.resources
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Delete.resources
-C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Login.resources
+H:\job\super market\bin\Debug\SuperMarket.exe.config
+H:\job\super market\obj\Debug\SuperMarket.exe
+H:\job\super market\obj\Debug\SuperMarket.pdb
+H:\job\super market\bin\Debug\SuperMarket.exe
+H:\job\super market\bin\Debug\SuperMarket.pdb
+H:\job\super market\obj\Debug\SuperMarket.csprojResolveAssemblyReference.cache
+H:\job\super market\obj\Debug\SuperMarket.Adding.resources
+H:\job\super market\obj\Debug\SuperMarket.Delete.resources
+H:\job\super market\obj\Debug\SuperMarket.EditProduct.resources
+H:\job\super market\obj\Debug\SuperMarket.Form1.resources
+H:\job\super market\obj\Debug\SuperMarket.Properties.Resources.resources
+H:\job\super market\obj\Debug\SuperMarket.Search.resources
+H:\job\super market\obj\Debug\SuperMarket.csproj.GenerateResource.Cache
+H:\job\super market\obj\Debug\SuperMarket.bill_table.resources
+H:\job\super market\obj\Debug\SuperMarket.store.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.Adding.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.store.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.bill_table.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.Delete.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.EditProduct.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.Form1.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.Properties.Resources.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.Search.resources
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.csproj.GenerateResource.cache
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.csproj.CoreCompileInputs.cache
+C:\Users\Mina\Desktop\super market\bin\Debug\SuperMarket.exe.config
+C:\Users\Mina\Desktop\super market\bin\Debug\SuperMarket.exe
+C:\Users\Mina\Desktop\super market\bin\Debug\SuperMarket.pdb
+C:\Users\Mina\Desktop\super market\bin\Debug\MySql.Data.dll
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.csproj.CopyComplete
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.exe
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.pdb
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.csprojAssemblyReference.cache
+C:\Users\Mina\Desktop\super market\obj\Debug\SuperMarket.bill_update.resources

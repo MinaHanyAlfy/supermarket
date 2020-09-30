@@ -40,31 +40,46 @@ namespace SuperMarket
         string name;
         double price;
         string kind;
-        int count;
+        double count;
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            name = textBox1.Text;
-            price = double.Parse(textBox3.Text);
-            count = int.Parse(textBox2.Text);
-            code = textBox5.Text;
-            kind = textBox4.Text;
-            
-            OleDbCommand cmd = new OleDbCommand("insert into product values(@id,@name,@num,@price,@kind,@date)",con);
-            con.Open();
-                    
-            cmd.Parameters.AddWithValue("@id", code);
-            cmd.Parameters.AddWithValue("@name", name);
-            cmd.Parameters.AddWithValue("@num", count);
-            cmd.Parameters.AddWithValue("@price",price);
-            cmd.Parameters.AddWithValue("@kind", kind);
-            cmd.Parameters.AddWithValue("@date", dateTimePicker1.Text.ToString());
-            cmd.ExecuteNonQuery();
-           
             con.Close();
-         //   Db.ExecuteNonQuery("Insert into product (ID,prodname,numofprod,priceofprod,kindofprod,code)Values(?)", new object[] { code, name, count,price,kind });
-            MessageBox.Show("تم الايداع بنجاح");
+            try {
+                
+                if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrEmpty(textBox4.Text) || String.IsNullOrEmpty(textBox5.Text)|| String.IsNullOrEmpty(textBox2.Text)|| String.IsNullOrEmpty(textBox3.Text))
+                {
+                    MessageBox.Show("قيم مفقودة ارجو التأكد من القيم");
+                }
+                else {
+                    name = textBox1.Text;
+                    code = textBox5.Text;
+                    kind = textBox4.Text;
+                    price = double.Parse(textBox3.Text);
+                    count = double.Parse(textBox2.Text); 
+                if (price <= 0 || count <= 0)
+                {
+                    MessageBox.Show("خطأ في قيم السعر او العدد يرجي التعديل ");
+                }
+                else { 
+                OleDbCommand cmd = new OleDbCommand("insert into product values(@id,@name,@num,@price,@kind,@date)", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", code);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@num", count);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@kind", kind);
+                cmd.Parameters.AddWithValue("@date", dateTimePicker1.Text.ToString());
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("تم الايداع بنجاح");
+                }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally
+            {
+                con.Close();
+            }
 
         }
     }

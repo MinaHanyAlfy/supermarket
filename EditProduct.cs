@@ -40,53 +40,56 @@ namespace SuperMarket
 
         private void button1_Click(object sender, EventArgs e)
         {
-        }
         
-
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            con.Open();
-            code = textBox5.Text;
-            name = textBox1.Text;
-            count = int.Parse(textBox2.Text);
-            kind = textBox4.Text;
-            price = double.Parse(textBox3.Text);
-            dateTimePicker1.Text = DateTime.Now.ToString();
-            OleDbCommand cmd = new OleDbCommand(" update product set prodname=@name, numofprod=@count, priceofprod=@price , kindofprod=@kind , [date]=@date where ID = @id",con);
-            cmd.Parameters.AddWithValue("@id", code);
-            cmd.Parameters.AddWithValue("@count", count);
-            cmd.Parameters.AddWithValue("@price", price);
-            cmd.Parameters.AddWithValue("@kind", kind);
-            cmd.Parameters.AddWithValue("@date", dateTimePicker1.Text.ToString());
-            cmd.Parameters.AddWithValue("@name", name);
-            
-            if (con.State == ConnectionState.Open)
-            {
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("DATA UPDATED");
-                    con.Close();
-                }
-                catch (Exception E)
-                {
-                    MessageBox.Show(E.Message);
-                    con.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("ERROR");
-            }
-            MessageBox.Show("تم التعديل بنجاح");
             con.Close();
+            try
+            {
+                if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrEmpty(textBox4.Text) || String.IsNullOrEmpty(textBox5.Text) || String.IsNullOrEmpty(textBox2.Text) || String.IsNullOrEmpty(textBox3.Text))
+            {
+                MessageBox.Show("قيم مفقودة ارجو التأكد من القيم");
+            }
+            else{ 
+                    code = textBox5.Text;
+                    name = textBox1.Text;
+                    count = int.Parse(textBox2.Text);
+                    kind = textBox4.Text;
+                    price = double.Parse(textBox3.Text);
+                if (price <= 0 || count <= 0)
+                {
+                    MessageBox.Show("خطأ في قيم السعر او العدد يرجي التعديل ");
+                }
+                else
+                {
+
+                    con.Open();
+                    cmd = new OleDbCommand("update product set [prodname]=@name, [numofprod]=@count, [priceofprod]=@price , [kindofprod]=@kind , [date]=@date where [ID]= @id", con);
+                    //cmd.Connection = con;
+                    //cmd.CommandText = ;
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@count", count);
+                    cmd.Parameters.AddWithValue("@price", price);
+                    cmd.Parameters.AddWithValue("@kind", kind);
+                    cmd.Parameters.AddWithValue("@date", dateTimePicker1.Text.ToString());
+                    cmd.Parameters.AddWithValue("@id", code);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("تم التعديل بنجاح", "Congrats");
+                    con.Close();
+                }
+            }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally
+            {
+                con.Close();
+            }
 
         }
 
         private void EditProduct_Load(object sender, EventArgs e)
         {
-
-           
 
             con.Open();
             cmd = new OleDbCommand();
@@ -106,7 +109,7 @@ namespace SuperMarket
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-       
+            
 
         }
 
@@ -114,7 +117,6 @@ namespace SuperMarket
         {
             cmd = new OleDbCommand();
             cmd.Connection = con;
-
             cmd.CommandText = " select * from product where prodname= @name";
             cmd.Parameters.AddWithValue("@name", comboBox1.Text);
             try
@@ -130,7 +132,7 @@ namespace SuperMarket
                         textBox2.Text = (read["numofprod"].ToString());
                         textBox1.Text = (read["prodname"].ToString());
                         textBox4.Text = (read["kindofprod"].ToString());
-                       
+                        dateTimePicker1.Text = (read["date"].ToString());
 
                     }
                 }
