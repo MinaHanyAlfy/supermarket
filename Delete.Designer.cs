@@ -184,6 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SuperMarket.Properties.Resources.backhome;
             this.ClientSize = new System.Drawing.Size(692, 274);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace SuperMarket
 {
@@ -20,11 +21,13 @@ namespace SuperMarket
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            dateTimePicker1.Value = DateTime.Now;
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,6 +67,13 @@ namespace SuperMarket
             Delete d1 = new Delete();
             d1.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            System.IO.File.Copy("DataMarket.mdb", String.Format(@"D:\BackUps\{0:ddMMyyyy-hhmmss}.mdb", DateTime.Now));
+            MessageBox.Show("تم حفظ البيانات");
         }
     }
 }

@@ -32,6 +32,7 @@ namespace SuperMarket
 
         private void Delete_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Value = DateTime.Now;
             con.Open();
             cmd = new OleDbCommand();
             cmd.Connection = con;
@@ -50,6 +51,7 @@ namespace SuperMarket
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             cmd = new OleDbCommand();
             cmd.Connection = con;
 

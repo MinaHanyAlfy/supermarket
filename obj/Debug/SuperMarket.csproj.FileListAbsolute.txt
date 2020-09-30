@@ -16,3 +16,4 @@ C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.exe
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.pdb
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Store.resources
 C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Delete.resources
+C:\Users\Mina\source\repos\SuperMarket\obj\Debug\SuperMarket.Login.resources
